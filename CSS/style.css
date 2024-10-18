@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Estilo general */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.logo-item-large button {
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+}
+.logo-item-small button {
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+}
+body {
+    background-color: #700a3600;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Container */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #000000c4;
+    position: relative;
+}
+
+/* Logo */
+.logo-1 {
+    width: 189px;
+    height: 150px;
+}
+
+/* Logo en pantallas pequeñas */
+.logo-item-small {
+    display: none;
+}
+
+.logo-item-large {
+    display: block;
+}
+
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    width: 100%;
+    
+}
+
+.navbar ul {
+    display: flex;
+    padding: 20px;
+    width: 90%; /* Ocupa el ancho completo */
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    padding: 0px 0px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+/* Icono del menú de hamburguesa */
+.menu-icono {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Checkbox para activar menú */
+#menu {
+    display: none;
+}
+
+/* Redes sociales */
+.socials{
+    display: flex;
+    margin-top: -110px;
+}
+.social{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social img{
+    margin: 11px 0 0 14px;
+}
+.social1{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social1:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social1 img{
+    margin: 6px 0 0 7px;
+}
+.social2{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social2:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social2 img{
+    margin: 11px 0 0 11px;
+}
+.social3{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social3:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social3 img{
+    margin: 9px 0 0 12px;
+}
+/* carrito */
+.social5{
+    margin: 0 20px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social5:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social5 img{
+    margin: 10px 0 0 9px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-icono {
+        display: block;
+    }
+
+    #menu:checked ~ .navbar {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar ul li a {
+        padding: 15px;
+    }
+
+    .logo-item-small {
+        display: block;
+        width: 175px;
+        height: auto;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    .logo-item-large {
+        display: none;
+    }
+
+    .socials {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        display: flex !important;
+    }
+
+    .menu-icono {
+        display: none;
+    }
+
+    .navbar ul {
+        justify-content: space-around;
+    }
+
+    .logo-item-large {
+        display: block;
+    }
+
+    .logo-item-small {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .tienda {
+        display: none;
+    }
+}
+
+/* fin menu */
+
+.mapa1{
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin: 20px; /* Añade margen alrededor del contenedor si es necesario */
+    border-radius: 2rem;
+}
+.maps{
+    filter: grayscale(100%) invert(92%) contrast(93%);
+    align-items: center;
+    
+    box-shadow: 5px 10px 15px rgb(255, 255, 255);
+}
+@media (max-width: 480px) {
+    .mapa1{
+        height: 60%;
+        width: 90%;
+    }
+}
+/* pie de pagina */
+.footer{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.links h4{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.links ul li a{
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.footer{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 8px;
+    border-bottom: 2px solid rgb(0, 0, 0); 
+    max-width: 1350px;
+}
+
+.separator {
+    border: none; 
+    border-top: 100px solid #700a3600; 
+    margin: 0; 
+}
+.h11{
+    border: none; 
+    border-top: 50px solid #000000; 
+    margin: 0; 
+}
+
+
+/* Estilos generales para la sección .media */
+.media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+    gap: 20px;
+}
+
+video {
+    width: 50%;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.781);
+}
+
+.media img {
+    width: 35%;
+    height: auto;
+    border-radius: 40px;
+    box-shadow: 2px 2px 20px rgb(0, 0, 0), -2px -2px 20px rgb(0, 0, 0);
+}
+
+/* Media Query para pantallas medianas */
+@media (max-width: 1024px) {
+    .media {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .media img, 
+    .media video {
+        width: 60%;
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .media {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .media img {
+        width: 70%;
+        order: 1;
+    }
+
+    .media video {
+        width: 70%;
+        order: 2;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (como móviles) */
+@media (max-width: 480px) {
+    .media{
+        margin-top: 120px;
+    }
+    .media img{
+        width: 70%;
+        height: auto;
+    }
+    .media video {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+.socialse {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    align-items: center;
+    gap: 9px; /* Espacio entre los iconos */
+}
+
+.socialse a {
+    display: flex;
+    align-items: center;
+}
+/*pie de pagina*/
+.pie-pagina {
+    width: 100%;
+    
+    background-color: #000000;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; /* Asegura que el contenido esté centrado horizontalmente */
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr; /* Ajusta la distribución del ancho */
+    grid-gap: 50px;
+    padding: 30px 0px;
+}
+
+.pie-pagina .grupo-1 .box1 figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box1 figure img {
+    width: 70%;
+    height: 70%;
+
+}
+
+.pie-pagina .grupo-1 .box {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+    text-align: justify; /* Justifica el texto para ocupar todo el espacio */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    line-height: 1.4; /* Ajusta la altura de línea para un mejor espaciado entre líneas */
+}
+
+/* Ajustes para la sección de redes sociales */
+.pie-pagina .grupo-1 .box:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido del contenedor */
+}
+
+.pie-pagina .grupo-1 .box:last-child h2 {
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente los íconos */
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+}
+.social11{
+    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social11:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social11 img{
+    margin: 11px 0 0 14px;
+}
+.social12{
+    margin: 0 10px;
+    height: 45px;
+    width: 44px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social12:hover{  
+    background-color: rgb(255, 0, 0);
+}
+.social12 img{
+    margin: 7px 0 0 7px;
+}
+.social13{
+    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social13:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social13 img{
+    margin: 11px 0 0 12px;
+}
+.social14{
+    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social14:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social14 img{
+    margin: 10px 0 0 12px;
+}
+
+
+/* Media Queries para dispositivos más pequeños */
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+/*buttom flotant*/
+/* Estilo del botón flotante */
+.boton-flotante {
+    position: fixed;
+    bottom: 390px; /* Ajusta la distancia desde la parte inferior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    background-color: rgb(73, 0, 0); /* Color de fondo del botón */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px; /* Bordes redondeados */
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Alinear verticalmente imagen y texto */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 9999; 
+}
+
+/* Estilo de la imagen dentro del botón */
+.boton-flotante img {
+    width: 24px; /* Tamaño de la imagen */
+    height: 24px;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Efecto hover */
+.boton-flotante:hover {
+    background-color: rgb(182, 0, 0); /* Cambia de color al pasar el mouse */
+}
+.imagen-fondo {
+    position: fixed; /* Fija la imagen para que permanezca mientras el usuario desplaza la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/pixelcut-export.jpeg'); /* Coloca tu imagen de fondo aquí */
+    background-size: cover; /* Ajusta la imagen al contenedor */
+    background-repeat: repeat-y; /* Repite la imagen verticalmente */
+    background-position: center; /* Centra la imagen */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Ajustes para dispositivos medianos */
+@media (max-width: 1024px) {
+    .imagen-fondo {
+        background-size: contain; /* Ajusta la imagen al contenedor sin recortar */
+        background-attachment: scroll; /* Permite que la imagen se desplace */
+    }
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    .imagen-fondo {
+        background-size: cover;
+    }
+}

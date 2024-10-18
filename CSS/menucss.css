@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+    background-image: url();
+    font-family: "Poppins", sans-serif;
+    background-repeat: repeat-y;
+    background-size: 90rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+    z-index: -1; /* Envía la imagen al fondo para que el contenido esté por encima */
+}
+
+.separator {
+    border: none; 
+    border-top: 70px solid transparent;
+    margin: 0; 
+    height: 70px;
+}
+
+header {
+    display: flex;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000c4;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.menu-1, .menu-2 {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.logo-3 {
+    width: 189px;
+    height: 150px;
+}
+
+.logo-2 {
+    width: 220px;
+    height: 200px;
+}
+
+.socials {
+    display: flex;
+}
+
+.social, .social1, .social2, .social3, .social5, .social11, .social12, .social13, .social14 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.social img, .social1 img, .social2 img, .social3 img, .social5 img, .social11 img, .social12 img, .social13 img, .social14 img {
+    max-width: 60%;
+    max-height: 60%;
+    display: block;
+}
+
+.social:hover, .social1:hover, .social2:hover, .social3:hover, .social5:hover, .social11:hover, .social12:hover, .social13:hover, .social14:hover {
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.1);
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 10px;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+}
+
+.menu .navbar ul li a:hover {
+    color: #DB241B;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    margin-top: 200px;
+    padding-bottom: 50px;
+}
+
+/* Estilo de las secciones */
+section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+
+.content4 {
+    display: flex;
+    flex-direction: row; /* Alineación en fila */
+    align-items: center;
+    justify-content: flex-start; /* Alinear elementos al inicio */
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.imagen {
+    max-width: 250px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 30px; /* Espacio reducido entre imagen y texto */
+    transition: transform 0.3s ease;
+}
+
+.imagen:hover {
+    transform: scale(1.1);
+}
+
+.texto {
+    color: #FFFFFF;
+    text-align: left; /* Alinea el texto a la izquierda */
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto h2 {
+    font-size: 28px;
+    margin-bottom: 50px; /* Margen reducido */
+}
+
+.texto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Pie de pagina */
+.footer {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    border-top: 2px solid rgb(0, 0, 0);
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center; 
+}
+
+.links ul li a {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.links ul li {
+    margin-bottom: 5px;
+}
+
+.links h4 {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.contenido1{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+/*pie de pagian*/
+.pie-pagina {
+    width: 100%;
+    
+    background-color: #000000;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; /* Asegura que el contenido esté centrado horizontalmente */
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr; /* Ajusta la distribución del ancho */
+    grid-gap: 50px;
+    padding: 30px 0px;
+}
+
+.pie-pagina .grupo-1 .box1 figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box1 figure img {
+    width: 70%;
+    height: 70%;
+
+}
+
+.pie-pagina .grupo-1 .box {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+    text-align: justify; /* Justifica el texto para ocupar todo el espacio */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    line-height: 1.4; /* Ajusta la altura de línea para un mejor espaciado entre líneas */
+}
+
+/* Ajustes para la sección de redes sociales */
+.pie-pagina .grupo-1 .box:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido del contenedor */
+}
+
+.pie-pagina .grupo-1 .box:last-child h2 {
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente los íconos */
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+}
+.social11{
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social11:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social11 img{
+    margin: 9px 0 0 12px;
+}
+.social12{
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social12:hover{  
+    background-color: rgb(255, 0, 0);
+}
+.social12 img{
+    margin: 5px 0 0 5px;
+}
+.social13{
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social13:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social13 img{
+    margin: 9px 0 0 10px;
+}
+.social14{
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social14:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social14 img{
+    margin: 8px 0 0 10px;
+}
+
+
+/* Media Queries para dispositivos más pequeños */
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}

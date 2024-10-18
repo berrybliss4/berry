@@ -1,0 +1,575 @@
+/* Estilo global */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.cardof{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 0px;
+}
+
+
+.imagen-fondo {
+    position: fixed; /* Fija la imagen para que permanezca mientras el usuario desplaza la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/pixelcut-export.jpeg'); /* Coloca tu imagen de fondo aquí */
+    background-size: cover; /* Ajusta la imagen al contenedor */
+    background-repeat: repeat-y; /* Repite la imagen verticalmente */
+    background-position: center; /* Centra la imagen */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Ajustes para dispositivos medianos */
+@media (max-width: 1024px) {
+    .imagen-fondo {
+        background-size: contain; /* Ajusta la imagen al contenedor sin recortar */
+        background-attachment: scroll; /* Permite que la imagen se desplace */
+    }
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    .imagen-fondo {
+        background-size: cover;
+    }
+}
+
+.containerp {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.box-info {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box-info > h1 {
+    text-align: left;
+    letter-spacing: 3px;
+    font-size: 1.8rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.data > p {
+    font-size: 1rem;
+}
+
+.data > p > i {
+    color: crimson;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.linksp {
+    display: flex;
+    gap: 10px;
+}
+
+.linksp > a {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background: crimson;
+    text-align: center;
+    transition: 0.1s;
+}
+
+.linksp > a > i {
+    color: #fff;
+    line-height: 40px;
+    font-size: 1.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box > input, .input-box > textarea {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.input-box > input:focus, .input-box > textarea:focus {
+    border-bottom: 3px solid crimson;
+    animation: shake 0.2s;
+}
+
+.input-box > i {
+    color: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    position: absolute;
+}
+
+.input-box > input:focus ~ i, .input-box > textarea:focus ~ i {
+    color: crimson;
+}
+
+form > button {
+    background: crimson;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+form > button:hover, .linksp > a:hover {
+    background: rgb(150, 13, 40);
+}
+
+/* Media queries para pantallas medianas */
+@media (min-width: 768px) {
+    .containerp {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+        gap: 50px;
+    }
+
+    .box-info > h1 {
+        font-size: 2.5rem;
+    }
+
+    .data > p > i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media queries para pantallas grandes */
+@media (min-width: 1200px) {
+    .containerp {
+        padding: 100px;
+        gap: 100px;
+    }
+
+    .box-info > h1 {
+        font-size: 3rem;
+    }
+
+    .data > p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+.logo-item-large button {
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+}
+.logo-item-small button {
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+}
+body {
+    background-color: #700a3600;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Container */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #000000c4;
+    position: relative;
+}
+
+/* Logo */
+.logo-1 {
+    width: 189px;
+    height: 150px;
+}
+
+/* Logo en pantallas pequeñas */
+.logo-item-small {
+    display: none;
+}
+
+.logo-item-large {
+    display: block;
+}
+
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    width: 100%;
+    
+}
+
+.navbar ul {
+    display: flex;
+    padding: 20px;
+    width: 90%; /* Ocupa el ancho completo */
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    padding: 0px 0px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+/* Icono del menú de hamburguesa */
+.menu-icono {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Checkbox para activar menú */
+#menu {
+    display: none;
+}
+
+/* Redes sociales */
+.socials{
+    display: flex;
+    margin-top: -110px;
+}
+.social{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social img{
+    margin: 11px 0 0 14px;
+}
+.social1{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social1:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social1 img{
+    margin: 6px 0 0 7px;
+}
+.social2{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social2:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social2 img{
+    margin: 11px 0 0 11px;
+}
+.social3{
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social3:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social3 img{
+    margin: 9px 0 0 12px;
+}
+/* carrito */
+.social5{
+    margin: 0 20px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social5:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social5 img{
+    margin: 10px 0 0 9px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-icono {
+        display: block;
+    }
+
+    #menu:checked ~ .navbar {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar ul li a {
+        padding: 15px;
+    }
+
+    .logo-item-small {
+        display: block;
+        width: 175px;
+        height: auto;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    .logo-item-large {
+        display: none;
+    }
+
+    .socials {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        display: flex !important;
+    }
+
+    .menu-icono {
+        display: none;
+    }
+
+    .navbar ul {
+        justify-content: space-around;
+    }
+
+    .logo-item-large {
+        display: block;
+    }
+
+    .logo-item-small {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .tienda {
+        display: none;
+    }
+}
+
+/* fin menu */
+
+.pie-pagina {
+    width: 100%;
+    
+    background-color: #000000;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; /* Asegura que el contenido esté centrado horizontalmente */
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr; /* Ajusta la distribución del ancho */
+    grid-gap: 50px;
+    padding: 30px 0px;
+}
+
+.pie-pagina .grupo-1 .box1 figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box1 figure img {
+    width: 70%;
+    height: 70%;
+
+}
+
+.pie-pagina .grupo-1 .box {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+    text-align: justify; /* Justifica el texto para ocupar todo el espacio */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    line-height: 1.4; /* Ajusta la altura de línea para un mejor espaciado entre líneas */
+}
+
+/* Ajustes para la sección de redes sociales */
+.pie-pagina .grupo-1 .box:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido del contenedor */
+}
+
+.pie-pagina .grupo-1 .box:last-child h2 {
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente los íconos */
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+}
+.social11{
+    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social11:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social11 img{
+    margin: 11px 0 0 14px;
+}
+.social12{
+    margin: 0 10px;
+    height: 45px;
+    width: 44px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social12:hover{  
+    background-color: rgb(255, 0, 0);
+}
+.social12 img{
+    margin: 7px 0 0 7px;
+}
+.social13{
+    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social13:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social13 img{
+    margin: 11px 0 0 12px;
+}
+.social14{
+    margin: 0 10px;
+    height: 45px;
+    width: 45px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.social14:hover{
+    background-color: rgb(255, 0, 0);
+}
+.social14 img{
+    margin: 10px 0 0 12px;
+}
+
+
+/* Media Queries para dispositivos más pequeños */
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
